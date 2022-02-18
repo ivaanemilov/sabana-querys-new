@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: cover;
+  margin: 0.5rem;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20vh;
+  margin: 0;
+  background-color: red;
+  text-align: center;
+}
+header > div {
+  flex: 2;
+}
+
+header img {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 0.9em;
+}
+
+h2 {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+header > img:nth-child(3) {
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12vh;
+  background-color: aqua;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  flex: 1;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+main img {
+  width: 50vw;
+}
+
+main {
+  display: grid;
+  min-height: 58vh;
+  place-items: center;
+  margin: 0;
+  background-color: seagreen;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 10vh;
+
+  margin: 0;
+  padding: 20px;
+  background-color: sienna;
+  font-size: 14px;
+  text-align: center;
+}
+footer h3 {
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main img {
+    width: 30vw;
+  }
+
+  header > img:nth-child(3) {
+    display: block;
+  }
+  header img {
+    width: 25%;
+  }
+  h1 {
+      font-size: 34px;
+  }
+  h2 {
+      font-size: 30px;
+  }
+
+  nav {
+      font-size: 24px;
+  }
+
+  h3 {
+      font-size: 28px;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  main img {
+    width: 15vw;
+  }
+  header > img:nth-child(3) {
+    display: block;
+  }
+  h1 {
+      font-size: 24px;
+  }
+  h2 {
+      font-size: 20px;
+  }
+
+ 
+}
